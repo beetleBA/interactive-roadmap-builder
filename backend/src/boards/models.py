@@ -16,13 +16,13 @@ class Board(models.Model):
 
     def __str__(self):
         return f"{self.title} ({self.user})"
-
+ 
     class Meta:
         verbose_name = "Доска"
         verbose_name_plural = "Доски"
 
 
-class Access (models.Model):
+class Access(models.Model):
     user = models.ForeignKey(
         settings.AUTH_USER_MODEL,
         on_delete=models.CASCADE,
